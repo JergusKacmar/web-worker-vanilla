@@ -2,6 +2,8 @@
 
 Calculation of n-th prime number in either main thread or web worker with vanilla javascript.
 
+You can check running app deployed with github pages [here](https://jerguskacmar.github.io/web-worker-vanilla/).
+
 # Run the project
 
 Requirements

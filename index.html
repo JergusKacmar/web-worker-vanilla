@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <main class="glass-effect">
+      <form class="lights-container" onSubmit="event.preventDefault()">
+        <label for="numberInput" class="lights-text"
+          >Find n-th prime number</label
+        >
+        <div class="number-input">
+          <button
+            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+            type="button"
+          ></button
+          ><input
+            type="number"
+            id="numberInput"
+            class="lights-text"
+            step="100000"
+            placeholder="n"
+            min="0"
+          /><button
+            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+            class="plus"
+            type="button"
+          ></button>
+        </div>
+        <button id="submit-main-thread" class="lights-text" type="button">
+          Calculate in main thread
+        </button>
+        <button id="submit-web-worker" class="lights-text" type="button">
+          Calculate in web worker
+        </button>
+      </form>
+      <div class="output lights-container">
+        <div id="calculation-output" class="lights-text">
+          Let's see how long can it take!
+        </div>
+        <div id="loader-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="calculation-time" class="lights-text"></div>
+      </div>
+    </main>
+    <script src="bundle.js"></script>
+  </body>
+</html>

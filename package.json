@@ -1,0 +1,21 @@
+{
+  "name": "vanilla-web-worker-showcase",
+  "version": "1.0.0",
+  "description": "Showcase of web worker usage with fps meter",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "open http://localhost:8080 && node ./src/server.js",
+    "prestart": "npm run browserify",
+    "browserify": "browserify -t workerify ./src/index.js > ./src/bundle.js",
+    "deploy": "gh-pages -d src",
+    "predeploy": "npm run browserify"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "fps-indicator": "^1.3.0",
+    "workerify": "^1.1.0",
+    "gh-pages": "^4.0.0"
+  }
+}
